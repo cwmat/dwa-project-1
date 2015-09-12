@@ -1,0 +1,9 @@
+.wrapper {
+  text-align: center;
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  height:500px;
+}
