@@ -1,21 +1,39 @@
+/* Cool text highlight colors */
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #ff00b4;
+}
+
+::selection {
+  color: white;
+  background: #ff00b4;
+}
+
+/* Header message styles */
 .message {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 9, 78, 0.85);
-  /*background: rgba(0, 0, 0, 0.75);*/
-  /*left: 0;
-  width: 100%;*/
-  /*padding: 0 500px;*/
-  /*position: absolute;
-  right: 0;*/
 }
 
 .message h1 {
-  font-size: 10em;
+  font-size: 4em;
 }
 
 .message h2 {
-  font-size: 5em;
+  font-size: 2em;
+}
+
+@media screen and (min-width: 48em) {
+    .message h1 {
+    font-size: 10em;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .message h2 {
+    font-size: 5em;
+  }
 }
 
 .message h1,
@@ -24,28 +42,40 @@
   margin:0;
 }
 
+/* General layout and styles */
 .is-center {
     text-align: center;
 }
 
 .box-pad {
   padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+@media screen and (min-width: 48em) {
+  .squish:hover {
+    width: 75%;
+    -webkit-transition: max-width 1s;
+    transition: width 0.15s;
+  }
+}
+
+h4 {
+  padding: 0 3em;
+  line-height: 150%;
+}
+
+i {
+  padding-left: 1em;
+}
+
+/* Splash styles */
 
 .splash .wide {
   width: 100%;
   margin: 0;
   padding: 0;
-}
-
-.message h1 {
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-}
-
-.bar {
-  background: black;
-  opacity: 0.50;
 }
 
 .hero {
@@ -54,144 +84,184 @@
   height:500px;
 }
 
-/*
- * -- SPLASH STYLES --
- * This is the blue top section that appears on the page.
- */
-
 .splash-container {
-    background: #1f8dd6;
-    background-image: url(../img/hero_test.jpg);
-    background-size: cover;
-    z-index: 1;
-    overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
-    width: 100%;
-    /*height: 88%;*/
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed !important;
+  background: black;
+  background-image: url(../img/hero_test.jpg);
+  background-size: cover;
+  z-index: 1;
+  overflow: hidden;
+  /* The following styles are required for the "scroll-over" effect */
+  width: 100%;
+  /*height: 88%;*/
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed !important;
 }
 
 .splash {
-    /* absolute center .splash within .splash-container */
-    width: 80%;
-    height: 50%;
-    margin: auto;
-    position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
-    text-align: center;
-    text-transform: uppercase;
+  /* absolute center .splash within .splash-container */
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 100px; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-/* This is the main heading that appears on the blue section */
+/* Main heading */
 .splash-head {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    border: 3px solid white;
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: 3px solid white;
+  padding: 1em 1.6em;
+  font-weight: 100;
+  border-radius: 5px;
+  line-height: 1em;
 }
 
-/* This is the subheading that appears on the blue section */
+/* Subheading */
 .splash-subhead {
-    color: white;
-    letter-spacing: 0.05em;
-    opacity: 0.8;
+  color: white;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
 }
 
-
-
-
-
-
-/*
- * -- CONTENT STYLES --
- * This represents the content area (everything below the blue section)
- */
+/* Content styles */
 .content-wrapper {
-    /* These styles are required for the "scroll-over" effect */
-    position: absolute;
-    /*top: 87%;*/
-    top: 100%;
-    width: 100%;
-    /*min-height: 12%;*/
-    z-index: 2;
-    background: white;
-
+  /* These styles are required for the "scroll-over" effect */
+  position: absolute;
+  /*top: 87%;*/
+  top: 100%;
+  width: 100%;
+  /*min-height: 12%;*/
+  z-index: 2;
+  background: white;
 }
 
 /* This is the class used for the main content headers (<h2>) */
 .content-head {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2em 0 1em;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
 .content-head-ribbon {
-    color: white;
+  color: white;
 }
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
-    color: #1f8dd6;
+  color: #1f8dd6;
 }
-    .content-subhead i {
-        margin-right: 7px;
-    }
 
+.content-subhead i {
+    margin-right: 7px;
+}
 
+/* Ribbon styles */
+.ribbon {
+  background: #333;
+  color: #aaa;
+}
 
+/* Footer styles */
+.footer {
+    background: #000;
+    padding: 0.1em 0;
+}
 
+.footer-head-text {
+  font-size: 1.15em;
+  color: #1f8dd6;
+}
 
+.footer-text {
+  font-size: 1.5em;
+  color: white;
+}
 
+li {
+  display: inline;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
+/* Image styles */
+.proj-img {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.me-img {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* Link styles */
+a {
+  text-decoration: none;
+}
 
+a:link {
+  color: #1f8dd6;
+}
 
+a:visited {
+  color: #1f8dd6;
+}
 
+a:hover {
+  color: black;
+}
 
+a:active {
+  color: black;
+}
 
+/* Icon link styles */
+a:link i {
+color: black;
+}
 
+a:visited i {
+  color: black;
+}
 
+a:hover i {
+  color: #ff00b4;
+}
 
+a:active i {
+  color: black;
+}
 
+/* Footer link styles */
+a:link span {
+color: white;
+}
 
+a:visited span {
+  color: white;
+}
 
+a:hover span {
+  color: #ff00b4;
+}
 
+a:active span {
+  color: black;
+}
 
-
-
-
-
-
-
-
-
-
-
-    /* This is the class used for the dark-background areas. */
-    .ribbon {
-        background: #2d3e50;
-        color: #aaa;
-    }
-
-    /* This is the class used for the footer */
-    .footer {
-        background: #111;
-    }
-
-
-
-    img {
-      width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+/* About me styles */
+.about-me {
+  padding-right: 10em;
+  padding-bottom: 1em;
+  line-height: 150%;
+}
