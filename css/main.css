@@ -53,9 +53,18 @@
   margin-right: auto;
 }
 
+/* This is sort of a 'hinky' way to do this.  Will try to fix in the future */
 @media screen and (min-width: 48em) {
   .squish:hover {
     width: 75%;
+    -webkit-transition: max-width 1s;
+    transition: width 0.15s;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  .squish:hover {
+    width: 65%;
     -webkit-transition: max-width 1s;
     transition: width 0.15s;
   }
@@ -191,6 +200,14 @@ li {
   padding-right: 1em;
 }
 
+@media screen and (max-width: 35.5em) {
+  li {
+    display: block;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
 /* Image styles */
 .proj-img {
   width: 400px;
@@ -264,4 +281,22 @@ a:active span {
   padding-right: 10em;
   padding-bottom: 1em;
   line-height: 150%;
+}
+
+@media screen and (max-width: 35.5em) {
+  .about-me {
+    padding: 1em;
+    line-height: 150%;
+  }
+
+  .content-head-ribbon {
+    padding: 0.25em 1em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .me-img {
+    width: 250px;
+    padding: 1em;
+  }
 }
