@@ -80,22 +80,15 @@ i {
 }
 
 /* Splash styles */
-
 .splash .wide {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.hero {
-  background-image: url(../img/hero.jpg);
-  background-size: cover;
-  height:500px;
-}
-
 .splash-container {
   background: black;
-  background-image: url(../img/hero_test.jpg);
+  background-image: url(../img/hero.jpg);
   background-size: cover;
   z-index: 1;
   overflow: hidden;
