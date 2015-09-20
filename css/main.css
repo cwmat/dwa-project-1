@@ -206,6 +206,7 @@ li {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 .me-img {
